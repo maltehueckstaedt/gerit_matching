@@ -35,7 +35,7 @@ Um den Wrapper verwenden zu können, muss ein eigens für die Anwendung des Wrap
 1. [match_gerit.yaml](match_gerit.yml) downladen.
 2. Laden und Installieren von Miniconda: https://docs.anaconda.com/miniconda/
 2. Den Anaconda-Terminal öffnen
-3. Das Environment erzeugen: `conda env create -f match_gerit.yaml`. Wenn das .yaml nicht in dem gleichen Pfad befindlich ist, wie der, in dem der Anaconda-Terminal ist: Pfad spezifizieren. Zum Beispiel so: `conda env create -f C:\Users\mhu\Downloads\match_gerit.yml`
+3. Das Environment erzeugen: `conda env create -f gerit_match.yml`. Wenn das .yaml nicht in dem gleichen Pfad befindlich ist, wie der, in dem der Anaconda-Terminal ist: Pfad spezifizieren. Zum Beispiel so: `conda env create -f C:\Users\mhu\Downloads\match_gerit.yml`
 
 ### Verwendung
 
