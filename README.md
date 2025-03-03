@@ -32,19 +32,19 @@ Statt klassischer Datenbereinigung und anschließendem Matching, wird ein vektor
 
 Um den Wrapper verwenden zu können, muss ein eigens für die Anwendung des Wrappers erzeugtes Conda-Environment installiert werden. 
 
-1. [match_gerit.yaml](match_gerit.yml) downladen.
+1. [gerit_match.yaml](gerit_match.yml) downladen.
 2. Laden und Installieren von Miniconda: https://docs.anaconda.com/miniconda/
-2. Den Anaconda-Terminal öffnen
-3. Das Environment erzeugen: `conda env create -f match_gerit.yaml`. Wenn das .yaml nicht in dem gleichen Pfad befindlich ist, wie der, in dem der Anaconda-Terminal ist: Pfad spezifizieren. Zum Beispiel so: `conda env create -f C:\Users\mhu\Downloads\match_gerit.yml`
+2. Den Anaconda-Terminal öffnen (zu finden, in dem man in der Taskleiste nach *Anaconda* sucht)
+3. Das Environment erzeugen: `conda env create -f gerit_match.yaml`. Wenn das .yaml nicht in dem gleichen Pfad befindlich ist, wie der, in dem der Anaconda-Terminal ist: Pfad spezifizieren. Zum Beispiel so: `conda env create -f C:\Users\mhu\Downloads\gerit_match.yml`
 
 ### Verwendung
 
-Um den Wrapper zu verwenden, laden wir in einem ersten Schritt die Pakete `reticulate` und `tidyverse`. Weiterhin spezifizieren wir den Pfad zu unserer Miniconda und das oben installierte Environment. Schließlich öffnen wir mit `file.edit("~/.Renviron")` unser `.Renviron` File und setzen unseren OpenAI-API-Key in in folgender Form: `OPENAI_API_KEY="DEIN_KEY"`. Wir speichern und schließen den Editor.
+Um den Wrapper zu verwenden, laden wir in einem ersten Schritt die Pakete `reticulate` und `tidyverse`. Weiterhin spezifizieren wir den Pfad zu unserer Miniconda und das oben installierte Environment. Die Ort, an dem die Miniconda liegt, finden wir, in dem wir in unseren Anaconda-Terminal gehen, und dort den Befehl `conda info` eingeben und unter `base environment` schauen.
+Schließlich öffnen wir mit `file.edit("~/.Renviron")` unser `.Renviron` File und setzen unseren OpenAI-API-Key in in folgender Form: `OPENAI_API_KEY="DEIN_KEY"`. Wir speichern und schließen den Editor.
 
 ```r
 library(reticulate)
 library(tidyverse)
-#Sys.setenv(RETICULATE_CONDA_BINARY = "D:/Programme/miniconda/condabin/conda.bat")
 Sys.setenv(RETICULATE_MINICONDA_PATH = "D:/Programme/miniconda")
 use_condaenv("gerit_match", required = TRUE)
 file.edit("~/.Renviron")

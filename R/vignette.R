@@ -1,7 +1,8 @@
 library(reticulate)
 library(tidyverse)
-install.packages("reticulate")#Sys.setenv(RETICULATE_CONDA_BINARY = "D:/Programme/miniconda/condabin/conda.bat")
-Sys.setenv(RETICULATE_MINICONDA_PATH = "D:/Programme/miniconda")
+
+#Sys.setenv(RETICULATE_CONDA_BINARY = "D:/Programme/miniconda/condabin/conda.bat")
+Sys.setenv(RETICULATE_MINICONDA_PATH = "C:/Users/mhu/AppData/Local/miniconda3")
 use_condaenv("gerit_match", required = TRUE)
 #file.edit("~/.Renviron")
 
